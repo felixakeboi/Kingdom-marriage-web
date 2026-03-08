@@ -708,7 +708,7 @@
             <div class="sv-badge">✓</div>
             <h3>You're In!</h3>
             <p id="svMsg">Your seat is reserved. We'll send the webinar link before the session.</p>
-            <a class="sv-join" href="https://meet.google.com/kyn-xomf-vcs" target="_blank" rel="noopener">🎥 &nbsp; Join the Webinar</a>
+            <a class="sv-join" href="https://calendar.app.google/7GnYdRSirH3DErt8A" target="_blank" rel="noopener">🎥 &nbsp; Join the Webinar</a>
             <a class="sv-wa" href="https://wa.me/2348164050518?text=Hi%2C%20I%20just%20registered!" target="_blank" rel="noopener">💬 &nbsp; Chat on WhatsApp</a>
           </div>
         </div>
@@ -739,7 +739,7 @@
   function closeMob(){document.getElementById("mobileNav").classList.remove("open")}
 
   /* ── DATES ── */
-  const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx3aqulrUfmsbyAgpsSslOj-0y5B7Yr5nOE-UWgYYYpYbyjuh0gpiYkB2WOKSj3JyBcDg/exec";
 
   function lastSatOf(y,m){
     const d=new Date(y,m+1,0);
@@ -816,7 +816,7 @@
       sessionDate:fmt(next),
       expectation:document.getElementById("expectation").value.trim()
     };
-    if(GOOGLE_SCRIPT_URL==="https://script.google.com/macros/s/AKfycbyvFOtAyn65LUy0EEOkGRy1OWofU7sjr-OwubF_tupDW4G8l2IU7lt5K1AwpptwHMjiuw/exec"){showSuccess(payload.firstName);return}
+    if(GOOGLE_SCRIPT_URL==="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"){showSuccess(payload.firstName);return}
     try{
       await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
       showSuccess(payload.firstName);
